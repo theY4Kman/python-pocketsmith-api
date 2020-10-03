@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pocketsmith-api"
+version = "0.1.0"
+description = "Pocketsmith API client"
+authors = ["Zach \"theY4Kman\" Kanzler <they4kman@gmail.com>"]
+license = "MIT"
+homepage = 'https://github.com/theY4Kman/python-pocketsmith-api'
+readme = 'README.md'
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Financial and Insurance Industry',
+    'Topic :: Internet :: WWW/HTTP',
+]
+packages = [
+    { include = 'pocketsmith' },
+    { include = 'LICENSE', format = 'sdist' },
+]
+
+[tool.poetry.dependencies]
+python = "^2.7"
+python-dateutil = "*"
+six = "*"
+urllib3 = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

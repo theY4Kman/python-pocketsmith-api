@@ -1,0 +1,3 @@
+[submodule "pocketsmith-api-spec"]
+	path = pocketsmith-api-spec
+	url = https://github.com/theY4Kman/pocketsmith-api-spec.git
