@@ -15,6 +15,7 @@ classifiers = [
 packages = [
     { include = 'pocketsmith' },
     { include = 'LICENSE', format = 'sdist' },
+    { include = 'CHANGELOG.md', format = 'sdist' },
 ]
 
 [tool.poetry.dependencies]
