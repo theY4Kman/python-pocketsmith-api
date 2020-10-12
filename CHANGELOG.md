@@ -6,8 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Changed
+ - Remove support for Python 2.7 — support only given for 3.6+
 
 
 ## [0.1.0] - 2020-10-03
 ### Added
-- Initial release: auto-generated OpenAPI client, with curated Pocketsmith API Client class
+ - Initial release: auto-generated OpenAPI client, with curated Pocketsmith API Client class
