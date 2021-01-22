@@ -22,7 +22,7 @@ packages = [
 python = ">=3.6"
 python-dateutil = "*"
 six = "*"
-urllib3 = "*"
+urllib3 = { version = "*", extras = ["secure"] }
 
 [tool.poetry.dev-dependencies]
 pytest = ">=3.6"
