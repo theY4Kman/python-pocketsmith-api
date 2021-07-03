@@ -10,6 +10,7 @@ class PocketsmithClient:
         self.accounts = pocketsmith.AccountsApi(self.api_client)
         self.budgeting = pocketsmith.BudgetingApi(self.api_client)
         self.categories = pocketsmith.CategoriesApi(self.api_client)
+        self.category_rules = pocketsmith.CategoryRulesApi(self.api_client)                
         self.institutions = pocketsmith.InstitutionsApi(self.api_client)
         self.transaction_accounts = pocketsmith.TransactionAccountsApi(self.api_client)
         self.transactions = pocketsmith.TransactionsApi(self.api_client)
