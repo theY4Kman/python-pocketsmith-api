@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Added
+ - Expose overlooked `attachments` and `category_rules` API clients on `PocketsmithClient` (see [GH#4](https://github.com/theY4Kman/python-pocketsmith-api/pull/4), thanks [@brett-comber](https://github.com/brett-comber))
 
 
 ## [1.0.1] — 2021-01-22
