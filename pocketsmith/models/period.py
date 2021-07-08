@@ -37,6 +37,7 @@ class Period(object):
         'actual_amount': 'float',
         'current': 'bool',
         'end_date': 'date',
+        'currency_code': 'str',
         'forecast_amount': 'float',
         'over_budget': 'bool',
         'over_by': 'float',
@@ -51,6 +52,7 @@ class Period(object):
         'actual_amount': 'actual_amount',
         'current': 'current',
         'end_date': 'end_date',
+        'currency_code': 'currency_code',
         'forecast_amount': 'forecast_amount',
         'over_budget': 'over_budget',
         'over_by': 'over_by',
@@ -61,7 +63,7 @@ class Period(object):
         'under_by': 'under_by'
     }
 
-    def __init__(self, actual_amount=None, current=None, end_date=None, forecast_amount=None, over_budget=None, over_by=None, percentage_used=None, refund_amount=None, start_date=None, under_budget=None, under_by=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, actual_amount=None, current=None, end_date=None, currency_code=None, forecast_amount=None, over_budget=None, over_by=None, percentage_used=None, refund_amount=None, start_date=None, under_budget=None, under_by=None, local_vars_configuration=None):  # noqa: E501
         """Period - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,6 +72,7 @@ class Period(object):
         self._actual_amount = None
         self._current = None
         self._end_date = None
+        self._currency_code = None
         self._forecast_amount = None
         self._over_budget = None
         self._over_by = None
@@ -86,6 +89,8 @@ class Period(object):
             self.current = current
         if end_date is not None:
             self.end_date = end_date
+        if currency_code is not None:
+            self.currency_code = currency_code
         if forecast_amount is not None:
             self.forecast_amount = forecast_amount
         if over_budget is not None:
@@ -171,6 +176,29 @@ class Period(object):
         """
 
         self._end_date = end_date
+
+    @property
+    def currency_code(self):
+        """Gets the currency_code of this Period.  # noqa: E501
+
+        The currency code for amounts in this Period.  # noqa: E501
+
+        :return: The currency_code of this Period.  # noqa: E501
+        :rtype: str
+        """
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        """Sets the currency_code of this Period.
+
+        The currency code for amounts in this Period.  # noqa: E501
+
+        :param currency_code: The currency_code of this Period.  # noqa: E501
+        :type: str
+        """
+
+        self._currency_code = currency_code
 
     @property
     def forecast_amount(self):
