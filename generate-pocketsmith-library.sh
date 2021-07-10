@@ -11,7 +11,7 @@ openapi-generator-cli generate \
   --output ./build/pocketsmith \
   --package-name pocketsmith \
   --verbose \
-  --additional-properties=packageVersion=1.1.0
+  --additional-properties=packageVersion="$(poetry version --short)"
 
 rsync --archive --progress ./build/pocketsmith/pocketsmith/ ./pocketsmith
 rm -rf ./build/pocketsmith
