@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+
+## [1.2.0] — 2021-07-10
 ### Added
  - Added missing `currency_code` field to `BudgetAnalysis` and `Period` types (see [GH#6](https://github.com/theY4Kman/python-pocketsmith-api/pull/6), thanks [@brett-comber](https://github.com/brett-comber))
 
