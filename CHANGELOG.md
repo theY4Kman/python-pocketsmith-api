@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+### Added
+ - Added missing `currency_code` field to `BudgetAnalysis` and `Period` types (see [GH#6](https://github.com/theY4Kman/python-pocketsmith-api/pull/6), thanks [@brett-comber](https://github.com/brett-comber))
+
+### Fixed
+ - `budgeting.get_trend_analysis()` now returns proper response data (see [GH#6](https://github.com/theY4Kman/python-pocketsmith-api/pull/6), thanks [@brett-comber](https://github.com/brett-comber))
+ - Corrected typo in `refund_amount`, was previously `refund_amound` (see [GH#6](https://github.com/theY4Kman/python-pocketsmith-api/pull/6), thanks [@brett-comber](https://github.com/brett-comber))
+ - `__version__` now correctly reported from `pocketsmith` package (see [GH#6](https://github.com/theY4Kman/python-pocketsmith-api/pull/6), thanks [@brett-comber](https://github.com/brett-comber))
 
 
 ## [1.1.0] — 2021-07-08
