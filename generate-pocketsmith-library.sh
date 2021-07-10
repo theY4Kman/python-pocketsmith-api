@@ -5,13 +5,16 @@ set -o xtrace
 SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd)
 cd "$SCRIPT_DIR"
 
+VERSION="$(poetry version --short)"
+
 openapi-generator-cli generate \
   --input-spec ./pocketsmith-api-spec/openapi.yaml \
   --generator-name python \
   --output ./build/pocketsmith \
   --package-name pocketsmith \
+  --http-user-agent="python-pocketsmith/$VERSION" \
   --verbose \
-  --additional-properties=packageVersion="$(poetry version --short)"
+  --additional-properties=packageVersion="$VERSION"
 
 rsync --archive --progress ./build/pocketsmith/pocketsmith/ ./pocketsmith
 rm -rf ./build/pocketsmith
