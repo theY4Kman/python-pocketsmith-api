@@ -37,6 +37,7 @@ class BudgetAnalysis(object):
         'average_actual_amount': 'float',
         'average_forecast_amount': 'float',
         'end_date': 'date',
+        'currency_code': 'str',
         'periods': 'list[Period]',
         'start_date': 'date',
         'total_actual_amount': 'float',
@@ -49,6 +50,7 @@ class BudgetAnalysis(object):
         'average_actual_amount': 'average_actual_amount',
         'average_forecast_amount': 'average_forecast_amount',
         'end_date': 'end_date',
+        'currency_code': 'currency_code',
         'periods': 'periods',
         'start_date': 'start_date',
         'total_actual_amount': 'total_actual_amount',
@@ -57,7 +59,7 @@ class BudgetAnalysis(object):
         'total_under_by': 'total_under_by'
     }
 
-    def __init__(self, average_actual_amount=None, average_forecast_amount=None, end_date=None, periods=None, start_date=None, total_actual_amount=None, total_forecast_amount=None, total_over_by=None, total_under_by=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, average_actual_amount=None, average_forecast_amount=None, end_date=None, currency_code=None, periods=None, start_date=None, total_actual_amount=None, total_forecast_amount=None, total_over_by=None, total_under_by=None, local_vars_configuration=None):  # noqa: E501
         """BudgetAnalysis - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,6 +68,7 @@ class BudgetAnalysis(object):
         self._average_actual_amount = None
         self._average_forecast_amount = None
         self._end_date = None
+        self._currency_code = None
         self._periods = None
         self._start_date = None
         self._total_actual_amount = None
@@ -80,6 +83,8 @@ class BudgetAnalysis(object):
             self.average_forecast_amount = average_forecast_amount
         if end_date is not None:
             self.end_date = end_date
+        if currency_code is not None:
+            self.currency_code = currency_code
         if periods is not None:
             self.periods = periods
         if start_date is not None:
@@ -161,6 +166,29 @@ class BudgetAnalysis(object):
         """
 
         self._end_date = end_date
+
+    @property
+    def currency_code(self):
+        """Gets the currency_code of this BudgetAnalysis.  # noqa: E501
+
+        The currency code for this BudgetAnalysis.  # noqa: E501
+
+        :return: The currency_code of this BudgetAnalysis.  # noqa: E501
+        :rtype: str
+        """
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        """Sets the currency_code of this BudgetAnalysis.
+
+        The currency code for this BudgetAnalysis.  # noqa: E501
+
+        :param currency_code: The currency_code of this BudgetAnalysis.  # noqa: E501
+        :type: str
+        """
+
+        self._currency_code = currency_code
 
     @property
     def periods(self):

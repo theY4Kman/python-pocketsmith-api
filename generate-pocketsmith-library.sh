@@ -10,7 +10,8 @@ openapi-generator-cli generate \
   --generator-name python \
   --output ./build/pocketsmith \
   --package-name pocketsmith \
-  --verbose
+  --verbose \
+  --additional-properties=packageVersion=1.1.0
 
 rsync --archive --progress ./build/pocketsmith/pocketsmith/ ./pocketsmith
 rm -rf ./build/pocketsmith

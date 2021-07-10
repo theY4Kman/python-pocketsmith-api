@@ -37,11 +37,12 @@ class Period(object):
         'actual_amount': 'float',
         'current': 'bool',
         'end_date': 'date',
+        'currency_code': 'str',
         'forecast_amount': 'float',
         'over_budget': 'bool',
         'over_by': 'float',
         'percentage_used': 'float',
-        'refund_amound': 'float',
+        'refund_amount': 'float',
         'start_date': 'date',
         'under_budget': 'bool',
         'under_by': 'float'
@@ -51,17 +52,18 @@ class Period(object):
         'actual_amount': 'actual_amount',
         'current': 'current',
         'end_date': 'end_date',
+        'currency_code': 'currency_code',
         'forecast_amount': 'forecast_amount',
         'over_budget': 'over_budget',
         'over_by': 'over_by',
         'percentage_used': 'percentage_used',
-        'refund_amound': 'refund_amound',
+        'refund_amount': 'refund_amount',
         'start_date': 'start_date',
         'under_budget': 'under_budget',
         'under_by': 'under_by'
     }
 
-    def __init__(self, actual_amount=None, current=None, end_date=None, forecast_amount=None, over_budget=None, over_by=None, percentage_used=None, refund_amound=None, start_date=None, under_budget=None, under_by=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, actual_amount=None, current=None, end_date=None, currency_code=None, forecast_amount=None, over_budget=None, over_by=None, percentage_used=None, refund_amount=None, start_date=None, under_budget=None, under_by=None, local_vars_configuration=None):  # noqa: E501
         """Period - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -70,11 +72,12 @@ class Period(object):
         self._actual_amount = None
         self._current = None
         self._end_date = None
+        self._currency_code = None
         self._forecast_amount = None
         self._over_budget = None
         self._over_by = None
         self._percentage_used = None
-        self._refund_amound = None
+        self._refund_amount = None
         self._start_date = None
         self._under_budget = None
         self._under_by = None
@@ -86,6 +89,8 @@ class Period(object):
             self.current = current
         if end_date is not None:
             self.end_date = end_date
+        if currency_code is not None:
+            self.currency_code = currency_code
         if forecast_amount is not None:
             self.forecast_amount = forecast_amount
         if over_budget is not None:
@@ -94,8 +99,8 @@ class Period(object):
             self.over_by = over_by
         if percentage_used is not None:
             self.percentage_used = percentage_used
-        if refund_amound is not None:
-            self.refund_amound = refund_amound
+        if refund_amount is not None:
+            self.refund_amount = refund_amount
         if start_date is not None:
             self.start_date = start_date
         if under_budget is not None:
@@ -171,6 +176,29 @@ class Period(object):
         """
 
         self._end_date = end_date
+
+    @property
+    def currency_code(self):
+        """Gets the currency_code of this Period.  # noqa: E501
+
+        The currency code for amounts in this Period.  # noqa: E501
+
+        :return: The currency_code of this Period.  # noqa: E501
+        :rtype: str
+        """
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        """Sets the currency_code of this Period.
+
+        The currency code for amounts in this Period.  # noqa: E501
+
+        :param currency_code: The currency_code of this Period.  # noqa: E501
+        :type: str
+        """
+
+        self._currency_code = currency_code
 
     @property
     def forecast_amount(self):
@@ -265,27 +293,27 @@ class Period(object):
         self._percentage_used = percentage_used
 
     @property
-    def refund_amound(self):
-        """Gets the refund_amound of this Period.  # noqa: E501
+    def refund_amount(self):
+        """Gets the refund_amount of this Period.  # noqa: E501
 
         This attribute tracks the amount that has been refunded or deducted to the actual amount. When a category is set to \"always expense\", any credit transactions are treated as refunds and when set to \"always income\", any debit transactions are treated as deductions.  # noqa: E501
 
-        :return: The refund_amound of this Period.  # noqa: E501
+        :return: The refund_amount of this Period.  # noqa: E501
         :rtype: float
         """
-        return self._refund_amound
+        return self._refund_amount
 
-    @refund_amound.setter
-    def refund_amound(self, refund_amound):
-        """Sets the refund_amound of this Period.
+    @refund_amount.setter
+    def refund_amount(self, refund_amount):
+        """Sets the refund_amount of this Period.
 
         This attribute tracks the amount that has been refunded or deducted to the actual amount. When a category is set to \"always expense\", any credit transactions are treated as refunds and when set to \"always income\", any debit transactions are treated as deductions.  # noqa: E501
 
-        :param refund_amound: The refund_amound of this Period.  # noqa: E501
+        :param refund_amount: The refund_amount of this Period.  # noqa: E501
         :type: float
         """
 
-        self._refund_amound = refund_amound
+        self._refund_amount = refund_amount
 
     @property
     def start_date(self):
