@@ -34,141 +34,215 @@ class InlineObject10(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'currency_code': 'str',
-        'institution_id': 'int',
-        'title': 'str',
-        'type': 'str'
+        'always_show_base_currency': 'bool',
+        'base_currency_code': 'str',
+        'beta_user': 'bool',
+        'email': 'str',
+        'name': 'str',
+        'time_zone': 'str',
+        'week_start_day': 'int'
     }
 
     attribute_map = {
-        'currency_code': 'currency_code',
-        'institution_id': 'institution_id',
-        'title': 'title',
-        'type': 'type'
+        'always_show_base_currency': 'always_show_base_currency',
+        'base_currency_code': 'base_currency_code',
+        'beta_user': 'beta_user',
+        'email': 'email',
+        'name': 'name',
+        'time_zone': 'time_zone',
+        'week_start_day': 'week_start_day'
     }
 
-    def __init__(self, currency_code=None, institution_id=None, title=None, type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, always_show_base_currency=None, base_currency_code=None, beta_user=None, email=None, name=None, time_zone=None, week_start_day=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject10 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._currency_code = None
-        self._institution_id = None
-        self._title = None
-        self._type = None
+        self._always_show_base_currency = None
+        self._base_currency_code = None
+        self._beta_user = None
+        self._email = None
+        self._name = None
+        self._time_zone = None
+        self._week_start_day = None
         self.discriminator = None
 
-        self.currency_code = currency_code
-        self.institution_id = institution_id
-        self.title = title
-        self.type = type
+        if always_show_base_currency is not None:
+            self.always_show_base_currency = always_show_base_currency
+        if base_currency_code is not None:
+            self.base_currency_code = base_currency_code
+        if beta_user is not None:
+            self.beta_user = beta_user
+        if email is not None:
+            self.email = email
+        if name is not None:
+            self.name = name
+        if time_zone is not None:
+            self.time_zone = time_zone
+        if week_start_day is not None:
+            self.week_start_day = week_start_day
 
     @property
-    def currency_code(self):
-        """Gets the currency_code of this InlineObject10.  # noqa: E501
+    def always_show_base_currency(self):
+        """Gets the always_show_base_currency of this InlineObject10.  # noqa: E501
 
-        A currency code for the account.  # noqa: E501
+        Whether the user wishes to have all monetary values converted to their base currency.  # noqa: E501
 
-        :return: The currency_code of this InlineObject10.  # noqa: E501
+        :return: The always_show_base_currency of this InlineObject10.  # noqa: E501
+        :rtype: bool
+        """
+        return self._always_show_base_currency
+
+    @always_show_base_currency.setter
+    def always_show_base_currency(self, always_show_base_currency):
+        """Sets the always_show_base_currency of this InlineObject10.
+
+        Whether the user wishes to have all monetary values converted to their base currency.  # noqa: E501
+
+        :param always_show_base_currency: The always_show_base_currency of this InlineObject10.  # noqa: E501
+        :type: bool
+        """
+
+        self._always_show_base_currency = always_show_base_currency
+
+    @property
+    def base_currency_code(self):
+        """Gets the base_currency_code of this InlineObject10.  # noqa: E501
+
+        A new base currency code for the user.  # noqa: E501
+
+        :return: The base_currency_code of this InlineObject10.  # noqa: E501
         :rtype: str
         """
-        return self._currency_code
+        return self._base_currency_code
 
-    @currency_code.setter
-    def currency_code(self, currency_code):
-        """Sets the currency_code of this InlineObject10.
+    @base_currency_code.setter
+    def base_currency_code(self, base_currency_code):
+        """Sets the base_currency_code of this InlineObject10.
 
-        A currency code for the account.  # noqa: E501
+        A new base currency code for the user.  # noqa: E501
 
-        :param currency_code: The currency_code of this InlineObject10.  # noqa: E501
+        :param base_currency_code: The base_currency_code of this InlineObject10.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and currency_code is None:  # noqa: E501
-            raise ValueError("Invalid value for `currency_code`, must not be `None`")  # noqa: E501
 
-        self._currency_code = currency_code
+        self._base_currency_code = base_currency_code
 
     @property
-    def institution_id(self):
-        """Gets the institution_id of this InlineObject10.  # noqa: E501
+    def beta_user(self):
+        """Gets the beta_user of this InlineObject10.  # noqa: E501
 
-        The ID of the institution to create this account in.  # noqa: E501
+        Whether the user is a beta user, and wishes to try out new features.  # noqa: E501
 
-        :return: The institution_id of this InlineObject10.  # noqa: E501
+        :return: The beta_user of this InlineObject10.  # noqa: E501
+        :rtype: bool
+        """
+        return self._beta_user
+
+    @beta_user.setter
+    def beta_user(self, beta_user):
+        """Sets the beta_user of this InlineObject10.
+
+        Whether the user is a beta user, and wishes to try out new features.  # noqa: E501
+
+        :param beta_user: The beta_user of this InlineObject10.  # noqa: E501
+        :type: bool
+        """
+
+        self._beta_user = beta_user
+
+    @property
+    def email(self):
+        """Gets the email of this InlineObject10.  # noqa: E501
+
+        A new email address for the user.  # noqa: E501
+
+        :return: The email of this InlineObject10.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this InlineObject10.
+
+        A new email address for the user.  # noqa: E501
+
+        :param email: The email of this InlineObject10.  # noqa: E501
+        :type: str
+        """
+
+        self._email = email
+
+    @property
+    def name(self):
+        """Gets the name of this InlineObject10.  # noqa: E501
+
+        A new name for the user.  # noqa: E501
+
+        :return: The name of this InlineObject10.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineObject10.
+
+        A new name for the user.  # noqa: E501
+
+        :param name: The name of this InlineObject10.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def time_zone(self):
+        """Gets the time_zone of this InlineObject10.  # noqa: E501
+
+        A new time zone for the user.  # noqa: E501
+
+        :return: The time_zone of this InlineObject10.  # noqa: E501
+        :rtype: str
+        """
+        return self._time_zone
+
+    @time_zone.setter
+    def time_zone(self, time_zone):
+        """Sets the time_zone of this InlineObject10.
+
+        A new time zone for the user.  # noqa: E501
+
+        :param time_zone: The time_zone of this InlineObject10.  # noqa: E501
+        :type: str
+        """
+
+        self._time_zone = time_zone
+
+    @property
+    def week_start_day(self):
+        """Gets the week_start_day of this InlineObject10.  # noqa: E501
+
+        The day of the week the user wishes their calendars to start on. A number between 0 and 6, where 0 is Sunday and 6 is Saturday.  # noqa: E501
+
+        :return: The week_start_day of this InlineObject10.  # noqa: E501
         :rtype: int
         """
-        return self._institution_id
+        return self._week_start_day
 
-    @institution_id.setter
-    def institution_id(self, institution_id):
-        """Sets the institution_id of this InlineObject10.
+    @week_start_day.setter
+    def week_start_day(self, week_start_day):
+        """Sets the week_start_day of this InlineObject10.
 
-        The ID of the institution to create this account in.  # noqa: E501
+        The day of the week the user wishes their calendars to start on. A number between 0 and 6, where 0 is Sunday and 6 is Saturday.  # noqa: E501
 
-        :param institution_id: The institution_id of this InlineObject10.  # noqa: E501
+        :param week_start_day: The week_start_day of this InlineObject10.  # noqa: E501
         :type: int
         """
-        if self.local_vars_configuration.client_side_validation and institution_id is None:  # noqa: E501
-            raise ValueError("Invalid value for `institution_id`, must not be `None`")  # noqa: E501
 
-        self._institution_id = institution_id
-
-    @property
-    def title(self):
-        """Gets the title of this InlineObject10.  # noqa: E501
-
-        A title for the account.  # noqa: E501
-
-        :return: The title of this InlineObject10.  # noqa: E501
-        :rtype: str
-        """
-        return self._title
-
-    @title.setter
-    def title(self, title):
-        """Sets the title of this InlineObject10.
-
-        A title for the account.  # noqa: E501
-
-        :param title: The title of this InlineObject10.  # noqa: E501
-        :type: str
-        """
-        if self.local_vars_configuration.client_side_validation and title is None:  # noqa: E501
-            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
-
-        self._title = title
-
-    @property
-    def type(self):
-        """Gets the type of this InlineObject10.  # noqa: E501
-
-        The type of the account.  # noqa: E501
-
-        :return: The type of this InlineObject10.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineObject10.
-
-        The type of the account.  # noqa: E501
-
-        :param type: The type of this InlineObject10.  # noqa: E501
-        :type: str
-        """
-        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-        allowed_values = ["bank", "credits", "loans", "mortgage", "stocks", "vehicle", "property", "other_asset", "other_liability"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
-        self._type = type
+        self._week_start_day = week_start_day
 
     def to_dict(self):
         """Returns the model properties as a dict"""

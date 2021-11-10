@@ -48,7 +48,7 @@ class InstitutionsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the user (required)
-        :param InlineObject13 inline_object13:
+        :param InlineObject14 inline_object14:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -74,7 +74,7 @@ class InstitutionsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the user (required)
-        :param InlineObject13 inline_object13:
+        :param InlineObject14 inline_object14:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -93,7 +93,7 @@ class InstitutionsApi(object):
 
         all_params = [
             'id',
-            'inline_object13'
+            'inline_object14'
         ]
         all_params.extend(
             [
@@ -131,8 +131,8 @@ class InstitutionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object13' in local_var_params:
-            body_params = local_var_params['inline_object13']
+        if 'inline_object14' in local_var_params:
+            body_params = local_var_params['inline_object14']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -513,7 +513,7 @@ class InstitutionsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the institution. (required)
-        :param InlineObject4 inline_object4:
+        :param InlineObject5 inline_object5:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -539,7 +539,7 @@ class InstitutionsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the institution. (required)
-        :param InlineObject4 inline_object4:
+        :param InlineObject5 inline_object5:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -558,7 +558,7 @@ class InstitutionsApi(object):
 
         all_params = [
             'id',
-            'inline_object4'
+            'inline_object5'
         ]
         all_params.extend(
             [
@@ -596,8 +596,8 @@ class InstitutionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object4' in local_var_params:
-            body_params = local_var_params['inline_object4']
+        if 'inline_object5' in local_var_params:
+            body_params = local_var_params['inline_object5']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

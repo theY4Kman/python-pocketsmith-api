@@ -48,7 +48,7 @@ class AttachmentsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the transaction. (required)
-        :param InlineObject8 inline_object8:
+        :param InlineObject9 inline_object9:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -74,7 +74,7 @@ class AttachmentsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the transaction. (required)
-        :param InlineObject8 inline_object8:
+        :param InlineObject9 inline_object9:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -93,7 +93,7 @@ class AttachmentsApi(object):
 
         all_params = [
             'id',
-            'inline_object8'
+            'inline_object9'
         ]
         all_params.extend(
             [
@@ -131,8 +131,8 @@ class AttachmentsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object8' in local_var_params:
-            body_params = local_var_params['inline_object8']
+        if 'inline_object9' in local_var_params:
+            body_params = local_var_params['inline_object9']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -171,7 +171,7 @@ class AttachmentsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the user. (required)
-        :param InlineObject11 inline_object11:
+        :param InlineObject12 inline_object12:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -197,7 +197,7 @@ class AttachmentsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the user. (required)
-        :param InlineObject11 inline_object11:
+        :param InlineObject12 inline_object12:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -216,7 +216,7 @@ class AttachmentsApi(object):
 
         all_params = [
             'id',
-            'inline_object11'
+            'inline_object12'
         ]
         all_params.extend(
             [
@@ -254,8 +254,8 @@ class AttachmentsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object11' in local_var_params:
-            body_params = local_var_params['inline_object11']
+        if 'inline_object12' in local_var_params:
+            body_params = local_var_params['inline_object12']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

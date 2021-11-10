@@ -39,6 +39,7 @@ class InlineObject7(object):
         'cheque_number': 'str',
         'date': 'str',
         'is_transfer': 'bool',
+        'labels': 'str',
         'memo': 'str',
         'note': 'str',
         'payee': 'str'
@@ -50,12 +51,13 @@ class InlineObject7(object):
         'cheque_number': 'cheque_number',
         'date': 'date',
         'is_transfer': 'is_transfer',
+        'labels': 'labels',
         'memo': 'memo',
         'note': 'note',
         'payee': 'payee'
     }
 
-    def __init__(self, amount=None, category_id=None, cheque_number=None, date=None, is_transfer=None, memo=None, note=None, payee=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, amount=None, category_id=None, cheque_number=None, date=None, is_transfer=None, labels=None, memo=None, note=None, payee=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject7 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,33 +68,33 @@ class InlineObject7(object):
         self._cheque_number = None
         self._date = None
         self._is_transfer = None
+        self._labels = None
         self._memo = None
         self._note = None
         self._payee = None
         self.discriminator = None
 
-        if amount is not None:
-            self.amount = amount
+        self.amount = amount
         if category_id is not None:
             self.category_id = category_id
         if cheque_number is not None:
             self.cheque_number = cheque_number
-        if date is not None:
-            self.date = date
+        self.date = date
         if is_transfer is not None:
             self.is_transfer = is_transfer
+        if labels is not None:
+            self.labels = labels
         if memo is not None:
             self.memo = memo
         if note is not None:
             self.note = note
-        if payee is not None:
-            self.payee = payee
+        self.payee = payee
 
     @property
     def amount(self):
         """Gets the amount of this InlineObject7.  # noqa: E501
 
-        A new amount for the transaction.  # noqa: E501
+        The amount of the transaction. A positive amount is a credit, and a negative amount is a debit.  # noqa: E501
 
         :return: The amount of this InlineObject7.  # noqa: E501
         :rtype: float
@@ -103,11 +105,13 @@ class InlineObject7(object):
     def amount(self, amount):
         """Sets the amount of this InlineObject7.
 
-        A new amount for the transaction.  # noqa: E501
+        The amount of the transaction. A positive amount is a credit, and a negative amount is a debit.  # noqa: E501
 
         :param amount: The amount of this InlineObject7.  # noqa: E501
         :type: float
         """
+        if self.local_vars_configuration.client_side_validation and amount is None:  # noqa: E501
+            raise ValueError("Invalid value for `amount`, must not be `None`")  # noqa: E501
 
         self._amount = amount
 
@@ -115,7 +119,7 @@ class InlineObject7(object):
     def category_id(self):
         """Gets the category_id of this InlineObject7.  # noqa: E501
 
-        The unique identifier of a new category for the transaction.  # noqa: E501
+        The unique identifier of a category for the transaction.  # noqa: E501
 
         :return: The category_id of this InlineObject7.  # noqa: E501
         :rtype: int
@@ -126,7 +130,7 @@ class InlineObject7(object):
     def category_id(self, category_id):
         """Sets the category_id of this InlineObject7.
 
-        The unique identifier of a new category for the transaction.  # noqa: E501
+        The unique identifier of a category for the transaction.  # noqa: E501
 
         :param category_id: The category_id of this InlineObject7.  # noqa: E501
         :type: int
@@ -138,7 +142,7 @@ class InlineObject7(object):
     def cheque_number(self):
         """Gets the cheque_number of this InlineObject7.  # noqa: E501
 
-        A new cheque number for the transaction.  # noqa: E501
+        A cheque number for the transaction.  # noqa: E501
 
         :return: The cheque_number of this InlineObject7.  # noqa: E501
         :rtype: str
@@ -149,7 +153,7 @@ class InlineObject7(object):
     def cheque_number(self, cheque_number):
         """Sets the cheque_number of this InlineObject7.
 
-        A new cheque number for the transaction.  # noqa: E501
+        A cheque number for the transaction.  # noqa: E501
 
         :param cheque_number: The cheque_number of this InlineObject7.  # noqa: E501
         :type: str
@@ -161,7 +165,7 @@ class InlineObject7(object):
     def date(self):
         """Gets the date of this InlineObject7.  # noqa: E501
 
-        A new date for the transaction.  # noqa: E501
+        The date when the transaction occurred.  # noqa: E501
 
         :return: The date of this InlineObject7.  # noqa: E501
         :rtype: str
@@ -172,11 +176,13 @@ class InlineObject7(object):
     def date(self, date):
         """Sets the date of this InlineObject7.
 
-        A new date for the transaction.  # noqa: E501
+        The date when the transaction occurred.  # noqa: E501
 
         :param date: The date of this InlineObject7.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and date is None:  # noqa: E501
+            raise ValueError("Invalid value for `date`, must not be `None`")  # noqa: E501
 
         self._date = date
 
@@ -184,7 +190,7 @@ class InlineObject7(object):
     def is_transfer(self):
         """Gets the is_transfer of this InlineObject7.  # noqa: E501
 
-        Whether the transaction is a transfer or not.  # noqa: E501
+        Whether the transaction should be indicated as a transfer.  # noqa: E501
 
         :return: The is_transfer of this InlineObject7.  # noqa: E501
         :rtype: bool
@@ -195,7 +201,7 @@ class InlineObject7(object):
     def is_transfer(self, is_transfer):
         """Sets the is_transfer of this InlineObject7.
 
-        Whether the transaction is a transfer or not.  # noqa: E501
+        Whether the transaction should be indicated as a transfer.  # noqa: E501
 
         :param is_transfer: The is_transfer of this InlineObject7.  # noqa: E501
         :type: bool
@@ -204,10 +210,33 @@ class InlineObject7(object):
         self._is_transfer = is_transfer
 
     @property
+    def labels(self):
+        """Gets the labels of this InlineObject7.  # noqa: E501
+
+        A set of comma-separated labels for the transaction.  # noqa: E501
+
+        :return: The labels of this InlineObject7.  # noqa: E501
+        :rtype: str
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        """Sets the labels of this InlineObject7.
+
+        A set of comma-separated labels for the transaction.  # noqa: E501
+
+        :param labels: The labels of this InlineObject7.  # noqa: E501
+        :type: str
+        """
+
+        self._labels = labels
+
+    @property
     def memo(self):
         """Gets the memo of this InlineObject7.  # noqa: E501
 
-        A new memo for the transaction.  # noqa: E501
+        A memo for the transaction.  # noqa: E501
 
         :return: The memo of this InlineObject7.  # noqa: E501
         :rtype: str
@@ -218,7 +247,7 @@ class InlineObject7(object):
     def memo(self, memo):
         """Sets the memo of this InlineObject7.
 
-        A new memo for the transaction.  # noqa: E501
+        A memo for the transaction.  # noqa: E501
 
         :param memo: The memo of this InlineObject7.  # noqa: E501
         :type: str
@@ -230,7 +259,7 @@ class InlineObject7(object):
     def note(self):
         """Gets the note of this InlineObject7.  # noqa: E501
 
-        A new note for the transaction.  # noqa: E501
+        A note for the transaction.  # noqa: E501
 
         :return: The note of this InlineObject7.  # noqa: E501
         :rtype: str
@@ -241,7 +270,7 @@ class InlineObject7(object):
     def note(self, note):
         """Sets the note of this InlineObject7.
 
-        A new note for the transaction.  # noqa: E501
+        A note for the transaction.  # noqa: E501
 
         :param note: The note of this InlineObject7.  # noqa: E501
         :type: str
@@ -253,7 +282,7 @@ class InlineObject7(object):
     def payee(self):
         """Gets the payee of this InlineObject7.  # noqa: E501
 
-        A new payee for the transaction.  # noqa: E501
+        The payee/merchant of the transaction.  # noqa: E501
 
         :return: The payee of this InlineObject7.  # noqa: E501
         :rtype: str
@@ -264,11 +293,13 @@ class InlineObject7(object):
     def payee(self, payee):
         """Sets the payee of this InlineObject7.
 
-        A new payee for the transaction.  # noqa: E501
+        The payee/merchant of the transaction.  # noqa: E501
 
         :param payee: The payee of this InlineObject7.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and payee is None:  # noqa: E501
+            raise ValueError("Invalid value for `payee`, must not be `None`")  # noqa: E501
 
         self._payee = payee
 

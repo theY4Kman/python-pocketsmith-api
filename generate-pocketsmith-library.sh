@@ -8,7 +8,7 @@ cd "$SCRIPT_DIR"
 VERSION="$(poetry version --short)"
 
 openapi-generator-cli generate \
-  --input-spec ./pocketsmith-api-spec/openapi.yaml \
+  --input-spec ./pocketsmith-api-spec/dist/openapi.yaml \
   --generator-name python \
   --output ./build/pocketsmith \
   --package-name pocketsmith \

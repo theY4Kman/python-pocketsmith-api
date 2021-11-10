@@ -267,7 +267,7 @@ class UsersApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the user. (required)
-        :param InlineObject9 inline_object9:
+        :param InlineObject10 inline_object10:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -293,7 +293,7 @@ class UsersApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the user. (required)
-        :param InlineObject9 inline_object9:
+        :param InlineObject10 inline_object10:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -312,7 +312,7 @@ class UsersApi(object):
 
         all_params = [
             'id',
-            'inline_object9'
+            'inline_object10'
         ]
         all_params.extend(
             [
@@ -350,8 +350,8 @@ class UsersApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object9' in local_var_params:
-            body_params = local_var_params['inline_object9']
+        if 'inline_object10' in local_var_params:
+            body_params = local_var_params['inline_object10']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

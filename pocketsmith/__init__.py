@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 
 # import apis into sdk package
 from pocketsmith.api.accounts_api import AccountsApi
@@ -23,6 +23,7 @@ from pocketsmith.api.attachments_api import AttachmentsApi
 from pocketsmith.api.budgeting_api import BudgetingApi
 from pocketsmith.api.categories_api import CategoriesApi
 from pocketsmith.api.category_rules_api import CategoryRulesApi
+from pocketsmith.api.data_connections_api import DataConnectionsApi
 from pocketsmith.api.institutions_api import InstitutionsApi
 from pocketsmith.api.transaction_accounts_api import TransactionAccountsApi
 from pocketsmith.api.transactions_api import TransactionsApi
@@ -45,13 +46,20 @@ from pocketsmith.models.budget_analysis import BudgetAnalysis
 from pocketsmith.models.budget_analysis_package import BudgetAnalysisPackage
 from pocketsmith.models.category import Category
 from pocketsmith.models.category_rule import CategoryRule
+from pocketsmith.models.data_connection import DataConnection
+from pocketsmith.models.data_connection_user import DataConnectionUser
 from pocketsmith.models.error import Error
+from pocketsmith.models.form import Form
+from pocketsmith.models.form_fields import FormFields
+from pocketsmith.models.form_options import FormOptions
+from pocketsmith.models.form_rows import FormRows
 from pocketsmith.models.inline_object import InlineObject
 from pocketsmith.models.inline_object1 import InlineObject1
 from pocketsmith.models.inline_object10 import InlineObject10
 from pocketsmith.models.inline_object11 import InlineObject11
 from pocketsmith.models.inline_object12 import InlineObject12
 from pocketsmith.models.inline_object13 import InlineObject13
+from pocketsmith.models.inline_object14 import InlineObject14
 from pocketsmith.models.inline_object2 import InlineObject2
 from pocketsmith.models.inline_object3 import InlineObject3
 from pocketsmith.models.inline_object4 import InlineObject4
@@ -60,8 +68,10 @@ from pocketsmith.models.inline_object6 import InlineObject6
 from pocketsmith.models.inline_object7 import InlineObject7
 from pocketsmith.models.inline_object8 import InlineObject8
 from pocketsmith.models.inline_object9 import InlineObject9
+from pocketsmith.models.inline_response403 import InlineResponse403
 from pocketsmith.models.institution import Institution
 from pocketsmith.models.period import Period
+from pocketsmith.models.provider import Provider
 from pocketsmith.models.scenario import Scenario
 from pocketsmith.models.transaction import Transaction
 from pocketsmith.models.transaction_account import TransactionAccount

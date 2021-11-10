@@ -48,7 +48,7 @@ class TransactionsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the transaction account. (required)
-        :param InlineObject6 inline_object6:
+        :param InlineObject7 inline_object7:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -74,7 +74,7 @@ class TransactionsApi(object):
 
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the transaction account. (required)
-        :param InlineObject6 inline_object6:
+        :param InlineObject7 inline_object7:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -93,7 +93,7 @@ class TransactionsApi(object):
 
         all_params = [
             'id',
-            'inline_object6'
+            'inline_object7'
         ]
         all_params.extend(
             [
@@ -131,8 +131,8 @@ class TransactionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object6' in local_var_params:
-            body_params = local_var_params['inline_object6']
+        if 'inline_object7' in local_var_params:
+            body_params = local_var_params['inline_object7']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -741,7 +741,7 @@ class TransactionsApi(object):
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the transaction. (required)
         :param str labels: A new set of labels for the transaction.
-        :param InlineObject7 inline_object7:
+        :param InlineObject8 inline_object8:
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -768,7 +768,7 @@ class TransactionsApi(object):
         :param async_req bool: execute request asynchronously
         :param int id: The unique identifier of the transaction. (required)
         :param str labels: A new set of labels for the transaction.
-        :param InlineObject7 inline_object7:
+        :param InlineObject8 inline_object8:
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -788,7 +788,7 @@ class TransactionsApi(object):
         all_params = [
             'id',
             'labels',
-            'inline_object7'
+            'inline_object8'
         ]
         all_params.extend(
             [
@@ -828,8 +828,8 @@ class TransactionsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object7' in local_var_params:
-            body_params = local_var_params['inline_object7']
+        if 'inline_object8' in local_var_params:
+            body_params = local_var_params['inline_object8']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

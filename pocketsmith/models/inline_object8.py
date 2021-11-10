@@ -34,47 +34,243 @@ class InlineObject8(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'attachment_id': 'int'
+        'amount': 'float',
+        'category_id': 'int',
+        'cheque_number': 'str',
+        'date': 'str',
+        'is_transfer': 'bool',
+        'memo': 'str',
+        'note': 'str',
+        'payee': 'str'
     }
 
     attribute_map = {
-        'attachment_id': 'attachment_id'
+        'amount': 'amount',
+        'category_id': 'category_id',
+        'cheque_number': 'cheque_number',
+        'date': 'date',
+        'is_transfer': 'is_transfer',
+        'memo': 'memo',
+        'note': 'note',
+        'payee': 'payee'
     }
 
-    def __init__(self, attachment_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, amount=None, category_id=None, cheque_number=None, date=None, is_transfer=None, memo=None, note=None, payee=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject8 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._attachment_id = None
+        self._amount = None
+        self._category_id = None
+        self._cheque_number = None
+        self._date = None
+        self._is_transfer = None
+        self._memo = None
+        self._note = None
+        self._payee = None
         self.discriminator = None
 
-        if attachment_id is not None:
-            self.attachment_id = attachment_id
+        if amount is not None:
+            self.amount = amount
+        if category_id is not None:
+            self.category_id = category_id
+        if cheque_number is not None:
+            self.cheque_number = cheque_number
+        if date is not None:
+            self.date = date
+        if is_transfer is not None:
+            self.is_transfer = is_transfer
+        if memo is not None:
+            self.memo = memo
+        if note is not None:
+            self.note = note
+        if payee is not None:
+            self.payee = payee
 
     @property
-    def attachment_id(self):
-        """Gets the attachment_id of this InlineObject8.  # noqa: E501
+    def amount(self):
+        """Gets the amount of this InlineObject8.  # noqa: E501
 
-        The unique identifier of the attachment.  # noqa: E501
+        A new amount for the transaction.  # noqa: E501
 
-        :return: The attachment_id of this InlineObject8.  # noqa: E501
+        :return: The amount of this InlineObject8.  # noqa: E501
+        :rtype: float
+        """
+        return self._amount
+
+    @amount.setter
+    def amount(self, amount):
+        """Sets the amount of this InlineObject8.
+
+        A new amount for the transaction.  # noqa: E501
+
+        :param amount: The amount of this InlineObject8.  # noqa: E501
+        :type: float
+        """
+
+        self._amount = amount
+
+    @property
+    def category_id(self):
+        """Gets the category_id of this InlineObject8.  # noqa: E501
+
+        The unique identifier of a new category for the transaction.  # noqa: E501
+
+        :return: The category_id of this InlineObject8.  # noqa: E501
         :rtype: int
         """
-        return self._attachment_id
+        return self._category_id
 
-    @attachment_id.setter
-    def attachment_id(self, attachment_id):
-        """Sets the attachment_id of this InlineObject8.
+    @category_id.setter
+    def category_id(self, category_id):
+        """Sets the category_id of this InlineObject8.
 
-        The unique identifier of the attachment.  # noqa: E501
+        The unique identifier of a new category for the transaction.  # noqa: E501
 
-        :param attachment_id: The attachment_id of this InlineObject8.  # noqa: E501
+        :param category_id: The category_id of this InlineObject8.  # noqa: E501
         :type: int
         """
 
-        self._attachment_id = attachment_id
+        self._category_id = category_id
+
+    @property
+    def cheque_number(self):
+        """Gets the cheque_number of this InlineObject8.  # noqa: E501
+
+        A new cheque number for the transaction.  # noqa: E501
+
+        :return: The cheque_number of this InlineObject8.  # noqa: E501
+        :rtype: str
+        """
+        return self._cheque_number
+
+    @cheque_number.setter
+    def cheque_number(self, cheque_number):
+        """Sets the cheque_number of this InlineObject8.
+
+        A new cheque number for the transaction.  # noqa: E501
+
+        :param cheque_number: The cheque_number of this InlineObject8.  # noqa: E501
+        :type: str
+        """
+
+        self._cheque_number = cheque_number
+
+    @property
+    def date(self):
+        """Gets the date of this InlineObject8.  # noqa: E501
+
+        A new date for the transaction.  # noqa: E501
+
+        :return: The date of this InlineObject8.  # noqa: E501
+        :rtype: str
+        """
+        return self._date
+
+    @date.setter
+    def date(self, date):
+        """Sets the date of this InlineObject8.
+
+        A new date for the transaction.  # noqa: E501
+
+        :param date: The date of this InlineObject8.  # noqa: E501
+        :type: str
+        """
+
+        self._date = date
+
+    @property
+    def is_transfer(self):
+        """Gets the is_transfer of this InlineObject8.  # noqa: E501
+
+        Whether the transaction is a transfer or not.  # noqa: E501
+
+        :return: The is_transfer of this InlineObject8.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_transfer
+
+    @is_transfer.setter
+    def is_transfer(self, is_transfer):
+        """Sets the is_transfer of this InlineObject8.
+
+        Whether the transaction is a transfer or not.  # noqa: E501
+
+        :param is_transfer: The is_transfer of this InlineObject8.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_transfer = is_transfer
+
+    @property
+    def memo(self):
+        """Gets the memo of this InlineObject8.  # noqa: E501
+
+        A new memo for the transaction.  # noqa: E501
+
+        :return: The memo of this InlineObject8.  # noqa: E501
+        :rtype: str
+        """
+        return self._memo
+
+    @memo.setter
+    def memo(self, memo):
+        """Sets the memo of this InlineObject8.
+
+        A new memo for the transaction.  # noqa: E501
+
+        :param memo: The memo of this InlineObject8.  # noqa: E501
+        :type: str
+        """
+
+        self._memo = memo
+
+    @property
+    def note(self):
+        """Gets the note of this InlineObject8.  # noqa: E501
+
+        A new note for the transaction.  # noqa: E501
+
+        :return: The note of this InlineObject8.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this InlineObject8.
+
+        A new note for the transaction.  # noqa: E501
+
+        :param note: The note of this InlineObject8.  # noqa: E501
+        :type: str
+        """
+
+        self._note = note
+
+    @property
+    def payee(self):
+        """Gets the payee of this InlineObject8.  # noqa: E501
+
+        A new payee for the transaction.  # noqa: E501
+
+        :return: The payee of this InlineObject8.  # noqa: E501
+        :rtype: str
+        """
+        return self._payee
+
+    @payee.setter
+    def payee(self, payee):
+        """Sets the payee of this InlineObject8.
+
+        A new payee for the transaction.  # noqa: E501
+
+        :param payee: The payee of this InlineObject8.  # noqa: E501
+        :type: str
+        """
+
+        self._payee = payee
 
     def to_dict(self):
         """Returns the model properties as a dict"""

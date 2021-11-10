@@ -34,86 +34,91 @@ class InlineObject11(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'file_data': 'str',
-        'file_name': 'str',
-        'title': 'str'
+        'currency_code': 'str',
+        'institution_id': 'int',
+        'title': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'file_data': 'file_data',
-        'file_name': 'file_name',
-        'title': 'title'
+        'currency_code': 'currency_code',
+        'institution_id': 'institution_id',
+        'title': 'title',
+        'type': 'type'
     }
 
-    def __init__(self, file_data=None, file_name=None, title=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, currency_code=None, institution_id=None, title=None, type=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject11 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._file_data = None
-        self._file_name = None
+        self._currency_code = None
+        self._institution_id = None
         self._title = None
+        self._type = None
         self.discriminator = None
 
-        if file_data is not None:
-            self.file_data = file_data
-        if file_name is not None:
-            self.file_name = file_name
-        if title is not None:
-            self.title = title
+        self.currency_code = currency_code
+        self.institution_id = institution_id
+        self.title = title
+        self.type = type
 
     @property
-    def file_data(self):
-        """Gets the file_data of this InlineObject11.  # noqa: E501
+    def currency_code(self):
+        """Gets the currency_code of this InlineObject11.  # noqa: E501
 
-        The base64-encoded contents of the source file. The supported file types are png, jpg, pdf, xls, xlsx, doc, docx.  # noqa: E501
+        A currency code for the account.  # noqa: E501
 
-        :return: The file_data of this InlineObject11.  # noqa: E501
+        :return: The currency_code of this InlineObject11.  # noqa: E501
         :rtype: str
         """
-        return self._file_data
+        return self._currency_code
 
-    @file_data.setter
-    def file_data(self, file_data):
-        """Sets the file_data of this InlineObject11.
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        """Sets the currency_code of this InlineObject11.
 
-        The base64-encoded contents of the source file. The supported file types are png, jpg, pdf, xls, xlsx, doc, docx.  # noqa: E501
+        A currency code for the account.  # noqa: E501
 
-        :param file_data: The file_data of this InlineObject11.  # noqa: E501
+        :param currency_code: The currency_code of this InlineObject11.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and currency_code is None:  # noqa: E501
+            raise ValueError("Invalid value for `currency_code`, must not be `None`")  # noqa: E501
 
-        self._file_data = file_data
+        self._currency_code = currency_code
 
     @property
-    def file_name(self):
-        """Gets the file_name of this InlineObject11.  # noqa: E501
+    def institution_id(self):
+        """Gets the institution_id of this InlineObject11.  # noqa: E501
 
-        The file name of the attachment.  # noqa: E501
+        The ID of the institution to create this account in.  # noqa: E501
 
-        :return: The file_name of this InlineObject11.  # noqa: E501
-        :rtype: str
+        :return: The institution_id of this InlineObject11.  # noqa: E501
+        :rtype: int
         """
-        return self._file_name
+        return self._institution_id
 
-    @file_name.setter
-    def file_name(self, file_name):
-        """Sets the file_name of this InlineObject11.
+    @institution_id.setter
+    def institution_id(self, institution_id):
+        """Sets the institution_id of this InlineObject11.
 
-        The file name of the attachment.  # noqa: E501
+        The ID of the institution to create this account in.  # noqa: E501
 
-        :param file_name: The file_name of this InlineObject11.  # noqa: E501
-        :type: str
+        :param institution_id: The institution_id of this InlineObject11.  # noqa: E501
+        :type: int
         """
+        if self.local_vars_configuration.client_side_validation and institution_id is None:  # noqa: E501
+            raise ValueError("Invalid value for `institution_id`, must not be `None`")  # noqa: E501
 
-        self._file_name = file_name
+        self._institution_id = institution_id
 
     @property
     def title(self):
         """Gets the title of this InlineObject11.  # noqa: E501
 
-        The title of the attachment. If the title is blank or not provided, the title will derived from the file name.  # noqa: E501
+        A title for the account.  # noqa: E501
 
         :return: The title of this InlineObject11.  # noqa: E501
         :rtype: str
@@ -124,13 +129,46 @@ class InlineObject11(object):
     def title(self, title):
         """Sets the title of this InlineObject11.
 
-        The title of the attachment. If the title is blank or not provided, the title will derived from the file name.  # noqa: E501
+        A title for the account.  # noqa: E501
 
         :param title: The title of this InlineObject11.  # noqa: E501
         :type: str
         """
+        if self.local_vars_configuration.client_side_validation and title is None:  # noqa: E501
+            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
 
         self._title = title
+
+    @property
+    def type(self):
+        """Gets the type of this InlineObject11.  # noqa: E501
+
+        The type of the account.  # noqa: E501
+
+        :return: The type of this InlineObject11.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this InlineObject11.
+
+        The type of the account.  # noqa: E501
+
+        :param type: The type of this InlineObject11.  # noqa: E501
+        :type: str
+        """
+        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        allowed_values = ["bank", "credits", "loans", "mortgage", "stocks", "vehicle", "property", "other_asset", "other_liability"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

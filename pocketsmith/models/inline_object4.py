@@ -34,75 +34,175 @@ class InlineObject4(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'currency_code': 'str',
-        'title': 'str'
+        'automatic_syncing': 'AutomaticSyncing',
+        'categorisation': 'Categorisation',
+        'name': 'Name',
+        'pending_transactions': 'PendingTransactions',
+        'login_form': 'LoginForm',
+        'interactive_login_form': 'InteractiveLoginForm'
     }
 
     attribute_map = {
-        'currency_code': 'currency_code',
-        'title': 'title'
+        'automatic_syncing': 'automatic_syncing',
+        'categorisation': 'categorisation',
+        'name': 'name',
+        'pending_transactions': 'pending_transactions',
+        'login_form': 'login_form',
+        'interactive_login_form': 'interactive_login_form'
     }
 
-    def __init__(self, currency_code=None, title=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, automatic_syncing=None, categorisation=None, name=None, pending_transactions=None, login_form=None, interactive_login_form=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject4 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._currency_code = None
-        self._title = None
+        self._automatic_syncing = None
+        self._categorisation = None
+        self._name = None
+        self._pending_transactions = None
+        self._login_form = None
+        self._interactive_login_form = None
         self.discriminator = None
 
-        if currency_code is not None:
-            self.currency_code = currency_code
-        if title is not None:
-            self.title = title
+        if automatic_syncing is not None:
+            self.automatic_syncing = automatic_syncing
+        if categorisation is not None:
+            self.categorisation = categorisation
+        if name is not None:
+            self.name = name
+        if pending_transactions is not None:
+            self.pending_transactions = pending_transactions
+        if login_form is not None:
+            self.login_form = login_form
+        if interactive_login_form is not None:
+            self.interactive_login_form = interactive_login_form
 
     @property
-    def currency_code(self):
-        """Gets the currency_code of this InlineObject4.  # noqa: E501
+    def automatic_syncing(self):
+        """Gets the automatic_syncing of this InlineObject4.  # noqa: E501
 
-        A new currency code for the institution.  # noqa: E501
 
-        :return: The currency_code of this InlineObject4.  # noqa: E501
-        :rtype: str
+        :return: The automatic_syncing of this InlineObject4.  # noqa: E501
+        :rtype: AutomaticSyncing
         """
-        return self._currency_code
+        return self._automatic_syncing
 
-    @currency_code.setter
-    def currency_code(self, currency_code):
-        """Sets the currency_code of this InlineObject4.
+    @automatic_syncing.setter
+    def automatic_syncing(self, automatic_syncing):
+        """Sets the automatic_syncing of this InlineObject4.
 
-        A new currency code for the institution.  # noqa: E501
 
-        :param currency_code: The currency_code of this InlineObject4.  # noqa: E501
-        :type: str
+        :param automatic_syncing: The automatic_syncing of this InlineObject4.  # noqa: E501
+        :type: AutomaticSyncing
         """
 
-        self._currency_code = currency_code
+        self._automatic_syncing = automatic_syncing
 
     @property
-    def title(self):
-        """Gets the title of this InlineObject4.  # noqa: E501
+    def categorisation(self):
+        """Gets the categorisation of this InlineObject4.  # noqa: E501
 
-        A new title for the institution.  # noqa: E501
 
-        :return: The title of this InlineObject4.  # noqa: E501
-        :rtype: str
+        :return: The categorisation of this InlineObject4.  # noqa: E501
+        :rtype: Categorisation
         """
-        return self._title
+        return self._categorisation
 
-    @title.setter
-    def title(self, title):
-        """Sets the title of this InlineObject4.
+    @categorisation.setter
+    def categorisation(self, categorisation):
+        """Sets the categorisation of this InlineObject4.
 
-        A new title for the institution.  # noqa: E501
 
-        :param title: The title of this InlineObject4.  # noqa: E501
-        :type: str
+        :param categorisation: The categorisation of this InlineObject4.  # noqa: E501
+        :type: Categorisation
         """
 
-        self._title = title
+        self._categorisation = categorisation
+
+    @property
+    def name(self):
+        """Gets the name of this InlineObject4.  # noqa: E501
+
+
+        :return: The name of this InlineObject4.  # noqa: E501
+        :rtype: Name
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineObject4.
+
+
+        :param name: The name of this InlineObject4.  # noqa: E501
+        :type: Name
+        """
+
+        self._name = name
+
+    @property
+    def pending_transactions(self):
+        """Gets the pending_transactions of this InlineObject4.  # noqa: E501
+
+
+        :return: The pending_transactions of this InlineObject4.  # noqa: E501
+        :rtype: PendingTransactions
+        """
+        return self._pending_transactions
+
+    @pending_transactions.setter
+    def pending_transactions(self, pending_transactions):
+        """Sets the pending_transactions of this InlineObject4.
+
+
+        :param pending_transactions: The pending_transactions of this InlineObject4.  # noqa: E501
+        :type: PendingTransactions
+        """
+
+        self._pending_transactions = pending_transactions
+
+    @property
+    def login_form(self):
+        """Gets the login_form of this InlineObject4.  # noqa: E501
+
+
+        :return: The login_form of this InlineObject4.  # noqa: E501
+        :rtype: LoginForm
+        """
+        return self._login_form
+
+    @login_form.setter
+    def login_form(self, login_form):
+        """Sets the login_form of this InlineObject4.
+
+
+        :param login_form: The login_form of this InlineObject4.  # noqa: E501
+        :type: LoginForm
+        """
+
+        self._login_form = login_form
+
+    @property
+    def interactive_login_form(self):
+        """Gets the interactive_login_form of this InlineObject4.  # noqa: E501
+
+
+        :return: The interactive_login_form of this InlineObject4.  # noqa: E501
+        :rtype: InteractiveLoginForm
+        """
+        return self._interactive_login_form
+
+    @interactive_login_form.setter
+    def interactive_login_form(self, interactive_login_form):
+        """Sets the interactive_login_form of this InlineObject4.
+
+
+        :param interactive_login_form: The interactive_login_form of this InlineObject4.  # noqa: E501
+        :type: InteractiveLoginForm
+        """
+
+        self._interactive_login_form = interactive_login_form
 
     def to_dict(self):
         """Returns the model properties as a dict"""
