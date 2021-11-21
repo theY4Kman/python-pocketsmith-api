@@ -34,10 +34,14 @@ class TransactionAccount(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'account_id': 'int',
         'created_at': 'datetime',
         'currency_code': 'str',
         'current_balance': 'float',
         'current_balance_date': 'date',
+        'data_feeds_account_id': 'int',
+        'data_feeds_balance_type': 'str',
+        'data_feeds_connection_id': 'int',
         'id': 'int',
         'institution': 'Institution',
         'name': 'str',
@@ -48,10 +52,14 @@ class TransactionAccount(object):
     }
 
     attribute_map = {
+        'account_id': 'account_id',
         'created_at': 'created_at',
         'currency_code': 'currency_code',
         'current_balance': 'current_balance',
         'current_balance_date': 'current_balance_date',
+        'data_feeds_account_id': 'data_feeds_account_id',
+        'data_feeds_balance_type': 'data_feeds_balance_type',
+        'data_feeds_connection_id': 'data_feeds_connection_id',
         'id': 'id',
         'institution': 'institution',
         'name': 'name',
@@ -61,16 +69,20 @@ class TransactionAccount(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, created_at=None, currency_code=None, current_balance=None, current_balance_date=None, id=None, institution=None, name=None, number=None, starting_balance=None, starting_balance_date=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, account_id=None, created_at=None, currency_code=None, current_balance=None, current_balance_date=None, data_feeds_account_id=None, data_feeds_balance_type=None, data_feeds_connection_id=None, id=None, institution=None, name=None, number=None, starting_balance=None, starting_balance_date=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """TransactionAccount - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._account_id = None
         self._created_at = None
         self._currency_code = None
         self._current_balance = None
         self._current_balance_date = None
+        self._data_feeds_account_id = None
+        self._data_feeds_balance_type = None
+        self._data_feeds_connection_id = None
         self._id = None
         self._institution = None
         self._name = None
@@ -80,6 +92,8 @@ class TransactionAccount(object):
         self._updated_at = None
         self.discriminator = None
 
+        if account_id is not None:
+            self.account_id = account_id
         if created_at is not None:
             self.created_at = created_at
         if currency_code is not None:
@@ -88,6 +102,12 @@ class TransactionAccount(object):
             self.current_balance = current_balance
         if current_balance_date is not None:
             self.current_balance_date = current_balance_date
+        if data_feeds_account_id is not None:
+            self.data_feeds_account_id = data_feeds_account_id
+        if data_feeds_balance_type is not None:
+            self.data_feeds_balance_type = data_feeds_balance_type
+        if data_feeds_connection_id is not None:
+            self.data_feeds_connection_id = data_feeds_connection_id
         if id is not None:
             self.id = id
         if institution is not None:
@@ -102,6 +122,29 @@ class TransactionAccount(object):
             self.starting_balance_date = starting_balance_date
         if updated_at is not None:
             self.updated_at = updated_at
+
+    @property
+    def account_id(self):
+        """Gets the account_id of this TransactionAccount.  # noqa: E501
+
+        ID of the Account this transaction account is linked to.  # noqa: E501
+
+        :return: The account_id of this TransactionAccount.  # noqa: E501
+        :rtype: int
+        """
+        return self._account_id
+
+    @account_id.setter
+    def account_id(self, account_id):
+        """Sets the account_id of this TransactionAccount.
+
+        ID of the Account this transaction account is linked to.  # noqa: E501
+
+        :param account_id: The account_id of this TransactionAccount.  # noqa: E501
+        :type: int
+        """
+
+        self._account_id = account_id
 
     @property
     def created_at(self):
@@ -188,6 +231,73 @@ class TransactionAccount(object):
         """
 
         self._current_balance_date = current_balance_date
+
+    @property
+    def data_feeds_account_id(self):
+        """Gets the data_feeds_account_id of this TransactionAccount.  # noqa: E501
+
+        ID of the linked Data Feeds Account  # noqa: E501
+
+        :return: The data_feeds_account_id of this TransactionAccount.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_feeds_account_id
+
+    @data_feeds_account_id.setter
+    def data_feeds_account_id(self, data_feeds_account_id):
+        """Sets the data_feeds_account_id of this TransactionAccount.
+
+        ID of the linked Data Feeds Account  # noqa: E501
+
+        :param data_feeds_account_id: The data_feeds_account_id of this TransactionAccount.  # noqa: E501
+        :type: int
+        """
+
+        self._data_feeds_account_id = data_feeds_account_id
+
+    @property
+    def data_feeds_balance_type(self):
+        """Gets the data_feeds_balance_type of this TransactionAccount.  # noqa: E501
+
+
+        :return: The data_feeds_balance_type of this TransactionAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_feeds_balance_type
+
+    @data_feeds_balance_type.setter
+    def data_feeds_balance_type(self, data_feeds_balance_type):
+        """Sets the data_feeds_balance_type of this TransactionAccount.
+
+
+        :param data_feeds_balance_type: The data_feeds_balance_type of this TransactionAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._data_feeds_balance_type = data_feeds_balance_type
+
+    @property
+    def data_feeds_connection_id(self):
+        """Gets the data_feeds_connection_id of this TransactionAccount.  # noqa: E501
+
+        ID of the linked Data Feeds Connection  # noqa: E501
+
+        :return: The data_feeds_connection_id of this TransactionAccount.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_feeds_connection_id
+
+    @data_feeds_connection_id.setter
+    def data_feeds_connection_id(self, data_feeds_connection_id):
+        """Sets the data_feeds_connection_id of this TransactionAccount.
+
+        ID of the linked Data Feeds Connection  # noqa: E501
+
+        :param data_feeds_connection_id: The data_feeds_connection_id of this TransactionAccount.  # noqa: E501
+        :type: int
+        """
+
+        self._data_feeds_connection_id = data_feeds_connection_id
 
     @property
     def id(self):

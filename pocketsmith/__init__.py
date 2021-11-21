@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.3.0"
+__version__ = "2.0.0"
 
 # import apis into sdk package
 from pocketsmith.api.accounts_api import AccountsApi
@@ -23,7 +23,8 @@ from pocketsmith.api.attachments_api import AttachmentsApi
 from pocketsmith.api.budgeting_api import BudgetingApi
 from pocketsmith.api.categories_api import CategoriesApi
 from pocketsmith.api.category_rules_api import CategoryRulesApi
-from pocketsmith.api.data_connections_api import DataConnectionsApi
+from pocketsmith.api.data_feeds_accounts_api import DataFeedsAccountsApi
+from pocketsmith.api.data_feeds_connections_api import DataFeedsConnectionsApi
 from pocketsmith.api.institutions_api import InstitutionsApi
 from pocketsmith.api.transaction_accounts_api import TransactionAccountsApi
 from pocketsmith.api.transactions_api import TransactionsApi
@@ -46,8 +47,10 @@ from pocketsmith.models.budget_analysis import BudgetAnalysis
 from pocketsmith.models.budget_analysis_package import BudgetAnalysisPackage
 from pocketsmith.models.category import Category
 from pocketsmith.models.category_rule import CategoryRule
-from pocketsmith.models.data_connection import DataConnection
-from pocketsmith.models.data_connection_user import DataConnectionUser
+from pocketsmith.models.data_feeds_account import DataFeedsAccount
+from pocketsmith.models.data_feeds_account_balance import DataFeedsAccountBalance
+from pocketsmith.models.data_feeds_connection import DataFeedsConnection
+from pocketsmith.models.data_feeds_connection_user import DataFeedsConnectionUser
 from pocketsmith.models.error import Error
 from pocketsmith.models.form import Form
 from pocketsmith.models.form_fields import FormFields

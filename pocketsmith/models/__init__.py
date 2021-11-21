@@ -23,8 +23,10 @@ from pocketsmith.models.budget_analysis import BudgetAnalysis
 from pocketsmith.models.budget_analysis_package import BudgetAnalysisPackage
 from pocketsmith.models.category import Category
 from pocketsmith.models.category_rule import CategoryRule
-from pocketsmith.models.data_connection import DataConnection
-from pocketsmith.models.data_connection_user import DataConnectionUser
+from pocketsmith.models.data_feeds_account import DataFeedsAccount
+from pocketsmith.models.data_feeds_account_balance import DataFeedsAccountBalance
+from pocketsmith.models.data_feeds_connection import DataFeedsConnection
+from pocketsmith.models.data_feeds_connection_user import DataFeedsConnectionUser
 from pocketsmith.models.error import Error
 from pocketsmith.models.form import Form
 from pocketsmith.models.form_fields import FormFields

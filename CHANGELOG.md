@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [2.0.0] — 2021-11-21
+### Breaking
+ - Renamed Data Connections to Data Feeds Connections (now `DataFeedsConnectionsApi`, exposed as `PocketsmithClient.data_feeds_connections`)
+
+### Added
+ - Added Data Feeds Accounts (see `DataFeedsAccountsApi`, exposed as `PocketsmithClient.data_feeds_accounts`)
+ - Added missing Data Feeds related fields to Transaction Accounts (`data_feeds_account_id`, `data_feeds_balance_type`, and `data_feeds_connection_id`)
+
+
 ## [1.3.0] — 2021-11-10
 ### Added
  - Added tentative Data Connections support (see `DataConnectionsApi`, exposed as `PocketsmithClient.data_connections`)
