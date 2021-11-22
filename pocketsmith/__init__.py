@@ -11,7 +11,7 @@
 """
 
 
-__version__ = "2.0.2"
+__version__ = "2.0.3"
 
 # import ApiClient
 from pocketsmith.api_client import ApiClient
@@ -26,5 +26,12 @@ from pocketsmith.exceptions import ApiTypeError
 from pocketsmith.exceptions import ApiValueError
 from pocketsmith.exceptions import ApiKeyError
 from pocketsmith.exceptions import ApiException
+
+# Import our models
+from pocketsmith.models import *
+
+# Import our APIs
+from pocketsmith.apis import *
+
 # Import a Pocketsmith-streamlined API client wrapper
 from pocketsmith.pocketsmith_client import PocketsmithClient

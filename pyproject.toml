@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pocketsmith-api"
-version = "2.0.2"
+version = "2.0.3"
 description = "Pocketsmith API client"
 authors = ["Zach \"theY4Kman\" Kanzler <they4kman@gmail.com>"]
 license = "MIT"
