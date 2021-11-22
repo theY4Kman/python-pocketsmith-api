@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [2.0.1] — 2021-11-22
+### Fixed
+ - Avoid validation errors with tentative Data Feeds enums when PocketSmith returns an undeclared value
+
+
 ## [2.0.0] — 2021-11-21
 ### Breaking
  - Renamed Data Connections to Data Feeds Connections (now `DataFeedsConnectionsApi`, exposed as `PocketsmithClient.data_feeds_connections`)
