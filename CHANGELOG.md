@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 
+## [2.0.2] — 2021-11-22
+### Changed
+ - Upgrade openapi-generator to 5.3.0 (previously using ancient 4.3.1)
+
+### Fixed
+ - Resolve some validation errors with Data Feeds Connections
+
+
 ## [2.0.1] — 2021-11-22
 ### Fixed
  - Avoid validation errors with tentative Data Feeds enums when PocketSmith returns an undeclared value
