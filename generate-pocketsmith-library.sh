@@ -20,4 +20,4 @@ rsync --archive --progress ./build/pocketsmith/pocketsmith/ ./pocketsmith
 rm -rf ./build/pocketsmith
 
 cp ./_overrides/pocketsmith_client.py ./pocketsmith/pocketsmith_client.py
-echo -e '# Import a Pocketsmith-streamlined API client wrapper\nfrom pocketsmith.pocketsmith_client import PocketsmithClient' >> ./pocketsmith/__init__.py
+cat ./_overrides/_init_header_append.py >> ./pocketsmith/__init__.py
