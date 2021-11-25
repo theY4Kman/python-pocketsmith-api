@@ -19,6 +19,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
+certifi = "*"
 python = ">=3.6"
 python-dateutil = "*"
 six = "*"

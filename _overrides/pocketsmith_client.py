@@ -1,9 +1,22 @@
+from typing import Optional
+
+import certifi
 import pocketsmith
+
+__all__ = ['PocketsmithClient']
 
 
 class PocketsmithClient:
-    def __init__(self, api_key: str):
-        configuration = pocketsmith.Configuration(api_key={'developerKey': api_key})
+    def __init__(
+        self, api_key: str, *,
+        ssl_ca_cert: Optional[str] = certifi.where(),
+        **settings,
+    ):
+        configuration = pocketsmith.Configuration(
+            api_key={'developerKey': api_key},
+            ssl_ca_cert=ssl_ca_cert,
+            **settings,
+        )
         self.api_client = pocketsmith.ApiClient(configuration)
 
         self.accounts = pocketsmith.AccountsApi(self.api_client)
