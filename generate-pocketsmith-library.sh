@@ -14,7 +14,9 @@ openapi-generator-cli generate \
   --package-name pocketsmith \
   --http-user-agent="python-pocketsmith/$VERSION" \
   --verbose \
-  --additional-properties=packageVersion="$VERSION"
+  --additional-properties=packageUrl="https://github.com/theY4Kman/python-pocketsmith-api" \
+  --additional-properties=packageVersion="$VERSION" \
+  # sentinel
 
 rsync --archive --progress ./build/pocketsmith/pocketsmith/ ./pocketsmith
 rm -rf ./build/pocketsmith

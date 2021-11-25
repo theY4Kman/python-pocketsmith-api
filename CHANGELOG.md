@@ -6,11 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+
+## [2.1.0] — 2021-11-25
 ### Added
  - Allow additional PocketSmith client configuration to be specified during instantiation
 
 ### Fixed
  - Resolve SSL cert validation error due to lack of CA cert bundle in urllib3 client
+ - Fix type validation errors due to Data Feeds schemas expecting ints but getting strings
 
 
 ## [2.0.3] — 2021-11-22
